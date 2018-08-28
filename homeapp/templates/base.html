@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1">
+    <script src="jquery-3.3.1.min.js"></script>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'homeapp/favicon.png' %}">
+    </head>
+  {% block title %}{% endblock %}
+  <div id="content">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homeapp/blogcss.css' %}" type="text/css">
+   <body>
+    <div id=nav>
+      <ul class="navbar-pages">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <!-- Hoping this links back to urls.py-->
+    </ul>
+   </div>
+
+    {% block body %}
+    {% endblock %}
+   </body>
+ </div>
+   <style>
+   @import url('https://fonts.googleapis.com/css?family=Roboto');
+   .navbar-pages {
+      font-family: Roboto, Sans Serif, Times New Roman;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+   }
+   li {
+      display: inline;
+      padding: 10px 10px;
+      background-color: gray;
+      text-align: center;
+      color: white;
+      float: left;
+      text-decoration: none;
+   }
+   li a{
+    color: white;
+    text-decoration: none;
+   }
+   li:hover {
+    background-color: #000000;
+  }
+  html{
+    overflow: scroll;
+  }
+  #content{
+    margin:0px 0px 0px 0px;
+    height:100%;
+    width:100%;
+  }
+  #nav {
+    width: 100%;
+    float: left;
+  }
+
+</html>

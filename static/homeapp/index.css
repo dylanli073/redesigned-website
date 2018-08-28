@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+      #atlas:hover{
+        background-color: #2f5fff;
+        padding-left:18px;
+        padding-right:18px;
+        margin-left:17px;
+        margin-right:17px;        
+        transition-duration: 0.15s;
+      }
+      .contactForm{
+        background-color: #807ad5;
+        color: white;
+        margin: auto;
+      }
+      .row{
+        width: 820px;
+        margin: auto;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #aboutme{
+        font-size: 40px;
+        color:orange;
+      }
+      #projectsheader{
+        font-size: 40px;
+        color: black;
+        margin-left: 25px;
+      }
+      .projectsTitles{
+        font-size: 20px;
+      }
+      .projectstext{
+        width: 830px;
+        margin: auto;
+      }
+      #formtext{
+        border: 2px solid rgb(0, 0, 0, 1); 
+        border-radius: 6px;
+        border-width: 1.5px;
+      }
+      #project1:hover{
+        padding-left:18px;
+        padding-right:18px;
+        margin-left:17px;
+        margin-right:17px;        
+        transition-duration: 0.15s;
+        background-color:#4AEFDF;
+      }
+      #project2:hover{
+        padding-left:18px;
+        padding-right:18px;
+        margin-left:17px;
+        margin-right:17px;        
+        transition-duration: 0.15s;
+        background-color:#4AEFDF;
+      }
+      #profimg{
+        width: 350px;
+        height: auto;
+        margin-left: 25px;
+      }
+      .about1{
+        float: left;
+        width: 380px;
+        margin-left: auto;
+        text-align: justify;
+      }
+      .about2{
+        float: right;
+        width: 380px;
+        text-align: justify;
+      }
+      #projects{
+        background-color: #38D9CA;
+        color: black;
+      }
+      .selectprojects{
+        color: black;
+        margin: 25px;
+        padding: 10px;
+        border: 2px solid rgb(170, 50, 220, 0.6);   
+        border-radius: 10px;   
+      }
+      .futureprojects{
+        color: white;
+        margin: 25px;
+        padding: 10px;
+        border: 2px solid orange;
+        border-radius: 10px;      
+      }
+      #welcometext{
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        color: orange;
+        font-size: 65px;
+      }
+      .dreamProjects{
+        background-color: #205adf;
+        color: white;
+      }
+      .whiteTitle{
+        font-size:40px; 
+        margin-left: 25px;
+      }
+      #textboxes{
+        height: 400px;
+        width: 900px;
+        vertical-align: top;
+        text-align: left;
+      }
+      .formbox{
+        margin-left: 20px;
+        padding-left: 5px;
+        height: 30px;
+        width: 200px;
+        border-radius: 6px;
+        font-size: 14px;
+        border:black
+      }
+    #message{
+      font-size: 14px;
+      border-radius: 6px;
+      padding: 6px;
+      margin-left: 0px;
+      border-color: black;
+    }
+    fieldset{
+      border: none;
+    }
+    .formlabel{
+      color: white;
+      font-size: 16px;
+      margin-left: 28px;
+    }
+    #msgsubmit{
+      height:30px;
+      font-family: Roboto;
+      font-size: 18px;
+      border-radius: 3px;
+      border-color: black;
+      margin-left: 50px;
+    }
+
+   	body {
+   		font-size: 15px;
+   		font-family: Roboto, sans-serif;
+   	}
+    canvas {
+      width: 100%;
+      height: 650px;
+      overflow=none;
+    }

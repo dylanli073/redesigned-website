@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+<!--     Designed and written by Dylan Li
+ -->    
+    {% block title %}
+    <title> Home </title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'homeapp/index.css' %}"> 
+    {% endblock %}
+
+   	{% block body %}
+
+    <div id="imgcontainer">
+      <em id="welcometext">Welcome!</em>
+      <canvas id="canvas"></canvas>
+    </div>
+
+
+   	<body class="paragraphs">
+      <br><br>
+      <div class="row">
+        <div class="about1">
+          <em id="aboutme">About Me</em>
+          <br><br>
+     		   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+           <p>
+           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+         </p>
+        </div> 
+        <div class="about2">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            {% load static %}
+            <img src="{% static 'homeapp/profimg.png' %}" id="profimg"></img>
+        </div>
+      </div>
+      <br><br>
+      <div id="projects">
+        <div class="projectstext">
+        <br>
+        <em id="projectsheader">Projects and Publications</em>
+        <div class="selectprojects" id="project1">
+          <p class="projectsTitles">A New Approach to Obesity Treatments</p>
+          <p>
+          The obesity pandemic exacerbates the risk for various deadly comorbidities including Type II Diabetes (T2DM). Current obesity and T2DM drugs are nonviable because they are ineffective or toxic. One class of antidiabetic drugs called TZDs successfully improves insulin sensitivity in type 2 diabetics by augmenting the activity of PPARγ, a protein regulating fat function. However, TZDs cause side effects ranging from weight gain to bone loss. This study reassessed PPARγ as an obesity and T2DM drug target by exploring distinctions between PPARγ’s two versions, PPARγ1 and PPARγ2. Data showed that PPARγ2 induced fat development and caused TZDs side effects. Conversely, PPARγ1 reduced fat development. Subsequently, a drug was designed to partially inhibit PPARγ2 activity without interfering with PPARγ1. Experiments revealed that PPARγ2 activity, but not PPARγ1 activity, was reduced. Ultimately, this novel drug discriminates between each isoform’s function and may prove effective in improving TZD treatments and combating obesity. 
+        </p>
+          <p>
+          To read more about this project, visit this <a href="https://www.ncbi.nlm.nih.gov/pubmed/27818196">link</a>.
+          </p>
+        </div>
+        <div class="selectprojects" id="project2">
+          <p class="projectsTitles">An Interesting New Fat Depot</p>
+          <p>
+            NEW FAT DEPOT
+          </p>
+          <p>
+          To read more about this project, visit this <a href="https://www.ncbi.nlm.nih.gov/pubmed/27818196">link</a>.
+          </p>
+        </div>
+        <br>
+        </div>
+      </div>
+      <div class="dreamProjects">
+        <div class="projectstext">
+          <br>
+          <em class="whiteTitle">Interests and Planned Projects</em>
+          <div class="futureprojects" id="atlas">
+            <p class="projectsTitles">A New Approach to Obesity Treatments</p>
+
+            The obesity pandemic exacerbates the risk for various deadly comorbidities including Type II Diabetes (T2DM). Current obesity and T2DM drugs are nonviable because they are ineffective or toxic. One class of antidiabetic drugs called TZDs successfully improves insulin sensitivity in type 2 diabetics by augmenting the activity of PPARγ, a protein regulating fat function. However, TZDs cause side effects ranging from weight gain to bone loss. This study reassessed PPARγ as an obesity and T2DM drug target by exploring distinctions between PPARγ’s two versions, PPARγ1 and PPARγ2. Data showed that PPARγ2 induced fat development and caused TZDs side effects. Conversely, PPARγ1 reduced fat development. Subsequently, a drug was designed to partially inhibit PPARγ2 activity without interfering with PPARγ1. Experiments revealed that PPARγ2 activity, but not PPARγ1 activity, was reduced. Ultimately, this novel drug discriminates between each isoform’s function and may prove effective in improving TZD treatments and combating obesity. 
+            <p>
+            To read more about this project, visit this <a href="https://www.ncbi.nlm.nih.gov/pubmed/27818196" style="color:white">link</a>.
+            </p>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="contactForm">
+        <div class="projectstext" id="formtext">
+          <br>
+          <em class="whiteTitle">Secure Contact Form</em>
+        
+          <form id="formproper" action="" method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <label class="formlabel" minlength="3" for="name">Name</label><br>
+            <input class="formbox" placeholder="Love Li" type="text" name="name" required autofocus>
+          </fieldset>
+          <br>
+          <fieldset>
+              <label class="formlabel" for="emailaddress">Email Address</label><br>
+            
+            <input class="formbox" placeholder="loveliperson@yahoo.com" type="email" name="email" required>
+          </fieldset>
+          <br>
+          <fieldset>
+            <label class="formlabel" for="message">Email Message</label><br>
+            <div class="formbox">
+               <textarea id="message" cols="103" rows="12" required></textarea>
+             </div>
+          </fieldset>
+          <br><br><br><br><br><br><br><br><br><br><br>
+          <button name="submit" type="submit" id="msgsubmit" data-submit="Message sending">Send</button>
+          <br><br><br><br><br>
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+      {% load static %}
+      <script src="{% static 'homeapp/main.js' %}"></script>
+   	</body>
+    <style>
+
+    </style>
+   	{% endblock %}
+
