@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
       #atlas:hover{
-        background-color: #2f5fff;
+        background-color: #fafafa;
         padding-left:18px;
         padding-right:18px;
         margin-left:17px;
@@ -76,7 +76,7 @@
       }
       #projects{
         background-color: #38D9CA;
-        color: black;
+        color: white;
       }
       .selectprojects{
         color: black;
@@ -86,11 +86,12 @@
         border-radius: 10px;   
       }
       .futureprojects{
-        color: white;
+        color: black;
         margin: 25px;
         padding: 10px;
         border: 2px solid orange;
-        border-radius: 10px;      
+        border-radius: 10px;
+        background-color: #f5f5f5;
       }
       #welcometext{
         position: absolute;
@@ -100,24 +101,18 @@
         font-size: 65px;
       }
       .dreamProjects{
-        background-color: #205adf;
-        color: white;
+        background-color: #ffffff;
+        color: black;
       }
       .whiteTitle{
         font-size:40px; 
         margin-left: 25px;
       }
-      #textboxes{
-        height: 400px;
-        width: 900px;
-        vertical-align: top;
-        text-align: left;
-      }
       .formbox{
         margin-left: 20px;
         padding-left: 5px;
         height: 30px;
-        width: 200px;
+        width: 180px;
         border-radius: 6px;
         font-size: 14px;
         border:black
@@ -128,6 +123,7 @@
       padding: 6px;
       margin-left: 0px;
       border-color: black;
+      width: 720px;
     }
     fieldset{
       border: none;
