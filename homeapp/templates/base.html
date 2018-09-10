@@ -11,15 +11,14 @@
   <div id="content">
     {% load static %}
     <link rel="stylesheet" href="{% static 'homeapp/blogcss.css' %}" type="text/css">
-   <body>
-    <div id=nav>
+<!--      <div id=nav>
       <ul class="navbar-pages">
         <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="{% url 'blog' %}">Blog</a></li>
         <li><a href="{% url 'projects' %}">Projects</a></li>
-        <!-- Hoping this links back to urls.py-->
+        links to url.py
     </ul>
-   </div>
+   </div>  -->
 
     {% block body %}
     {% endblock %}

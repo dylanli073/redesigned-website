@@ -10,3 +10,8 @@ def blog(request):
 
 def projects(request):
     return render(request, 'projects.html')
+
+# def mailForm(request):
+# 	form_class = ContactForm
+
+# 	return render(request, 'mailForm.php')
