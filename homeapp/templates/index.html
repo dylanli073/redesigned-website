@@ -20,22 +20,23 @@
    	<body class="paragraphs">
       <br><br>
       <div class="row">
+
         <div class="about1">
           <em id="aboutme">About Me</em>
           <br><br>
+          <img src="{% static 'homeapp/profimg.png' %}" id="profimg">
+          <p>
      		   I am currently a sophomore at Harvard College living in Dunster House who is passionate about physics, computer science, music, and so much more. In high school, I was heavily involved in biology research, developing a new compound with applications to help treat obesity and diabetes alongside current therapeutics. In college, I am passionate about researching physics and engineering, and am currently involved in a team aiming to launch a Cubesat into space for research and testing purposes. As elaborated below, I feel that space exploration represents a final frontier for human ambition, one that can unite people from around the world in a common, inspiring human goal. 
+         </p>
            <p>
             During my free time, I was also involved in music performance, pursuing my love of piano at the Manhattan School of Music. Continuing the love of making music alongside like-minded peers, I am currently heavily involved in a music group called the Harvard Radcliffe Collegium, which collaborates with various professional groups such as Odyssey Opera to put on major productions and performances. During my free time, I also enjoy running, and plan on running a full marathon by the end of summer 2019. 
            </p>
-        </div> 
-        <div class="about2">
-          <img src="{% static 'homeapp/profimg.png' %}" id="profimg"></img>
-
-          In the future, I hope to be working in academia towards a professorship in physics or engineering. I specifically want to work to develop a community around space exploration, propulsion systems, communication systems, and embedded systems to launch rockets deep into space. Read more about my ambitions and my passions below if you're curious! 
-
-            {% load static %}
-
+           <p>
+            In the future, I hope to be working in academia towards a professorship in physics or engineering. I specifically want to work to develop a community around space exploration, propulsion systems, communication systems, and embedded systems to launch rockets deep into space. Read more about my ambitions and my passions below if you're curious! 
+           </p>
         </div>
+        {% load static %}
+
       </div>
       <br><br>
       <div id="projects">
@@ -93,6 +94,9 @@
             </p>
           </div>
           <br>
+        </div>
+        <div class="footer">
+          <p>© Dylan Li 2019</p>
         </div>
       </div>
 

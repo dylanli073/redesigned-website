@@ -29,12 +29,12 @@ function email() {
 
 $(document).ready(function(){
 canvas=document.getElementById("canvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 context=canvas.getContext("2d");
 
 function clearCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
   context.fillStyle="rgb(32, 32, 32)";
   context.fillRect(0,0,canvas.width, canvas.height);
 }
@@ -91,7 +91,7 @@ class Smoke {
     this.size = 4.5 - this.lifespan/10;
     var position = this.position;
     context.fillStyle = this.color;
-    context.fillRect(position.x, position.y, this.size, this.size);
+    context.fillRect(position.x-1, position.y, this.size, this.size);
      this.velocity.add(this.acceleration);
      position.add(this.velocity);
   }
@@ -130,11 +130,11 @@ class SmokeTrail{
 class Rocket {
   constructor(a,b){
     this.color = "white";
-    this.height = 40;
-    this.width = 5;
+    this.height = 80;
+    this.width = canvas.width/70;
     this.a = a;
     this.b = b;
-    this.position = new Vector(canvas.width * a/100, canvas.height * b/100- this.height-20);
+    this.position = new Vector(canvas.width * this.a/100, canvas.height * this.b/100- this.height-20);
     this.velocity = new Vector(0,0);
     this.acceleration = new Vector(0,-.08)
     this.smokeTrail = new SmokeTrail(this);
@@ -143,7 +143,8 @@ class Rocket {
   
    reset(){
      this.velocity = new Vector(0,0);
-     this.position = new Vector(canvas.width * this.a/100, canvas.height * this.b/100- this.height-20);
+     this.random = Math.random() * canvas.width;
+     this.position = new Vector(this.random, canvas.height * this.b/100- this.height-20);
      this.acceleration = new Vector(0,-.08);
    }
   
@@ -165,9 +166,11 @@ class Rocket {
   }
 }
 
-rocket2 = new Rocket(70, 100);
+random = Math.random() * canvas.width;
+rocket2 = new Rocket(random, 100);
 function loop() {
   clearCanvas();
+
   rocket2.animate();
   //is this working
 }
