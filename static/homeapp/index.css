@@ -13,7 +13,8 @@
         margin: auto;
       }
       .row{
-        width: 820px;
+        width:100%;
+        max-width: 820px;
         margin: auto;
       }
       .row:after {
@@ -35,6 +36,7 @@
       }
       .projectstext{
         width: 830px;
+        max-width: 100%;
         margin: auto;
       }
       #formtext{

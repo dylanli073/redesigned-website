@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 <!--     Designed and written by Dylan Li
  -->    
+    <?php error_reporting(0); ?>
+
     {% block title %}
     <title> Home </title>
     {% load static %}
@@ -15,7 +17,6 @@
       <canvas id="canvas"></canvas>
     </div>
 
-
    	<body class="paragraphs">
       <br><br>
       <div class="row">
@@ -28,10 +29,12 @@
            </p>
         </div> 
         <div class="about2">
+          <img src="{% static 'homeapp/profimg.png' %}" id="profimg"></img>
+          
           In the future, I hope to be working in academia towards a professorship in physics or engineering. I specifically want to work to develop a community around space exploration, propulsion systems, communication systems, and embedded systems to launch rockets deep into space. Read more about my ambitions and my passions below if you're curious! Coming soon to this website is a full suite of blogs and Youtube shorts and travel videos to South Africa from touring abroad and studying abroad. If you would like to get in contact for any reason, please contact me in the below form!
 
             {% load static %}
-            <img src="{% static 'homeapp/profimg.png' %}" id="profimg"></img>
+
         </div>
       </div>
       <br><br>
@@ -79,7 +82,7 @@
           <div class="futureprojects" id="atlas">
             <p class="projectsTitles">Space and Robotics</p>
 
-            In order to extend the bounds of human exploration, multiple steps are needed. Firstly, there must be new sustainable engineering of biological systems to counteract the effects of microgravity and radiation. Secondly, there needs to be a sustainable biohabitat on Mars. Thirdly, the amount of fuel required for such a mission right now makes the possibility of large scale travel relatively impossible. Fourthly, there exists a big stigma against traveling in space in general, especially with limited amounts of funding. Fifthly, the ultimIn order to extend the bounds of human exploration, multiple steps are needed. Firstly, there must be new sustainable engineering of biological systems to counteract the effects of microgravity and radiation. Secondly, there needs to be a sustainable biohabitat on Mars. Thirdly, the amount of fuel required for such a mission right now makes the possibility of large scale travel relatively impossible. Fourthly, there exists a big stigma against traveling in space in general, especially with limited amounts of funding. Fifthly, the ultimate goal is not to travel to Mars but to travel beyond as well -- becoming an interstellar civilization requires that the fear of space be overcome and requires innovating with new technologies. 
+            In order to extend the bounds of human exploration, multiple steps are needed. Firstly, there must be new sustainable engineering of biological systems to counteract the effects of microgravity and radiation. Secondly, there needs to be a sustainable biohabitat on Mars. Thirdly, the amount of fuel required for such a mission right now makes the possibility of large scale travel relatively impossible. Fourthly, there exists a big stigma against traveling in space in general, especially with limited amounts of funding. In order to extend the bounds of human exploration, multiple steps are needed. Firstly, there must be new sustainable engineering of biological systems to counteract the effects of microgravity and radiation. Secondly, there needs to be a sustainable biohabitat on Mars. Thirdly, the amount of fuel required for such a mission right now makes the possibility of large scale travel relatively impossible. Fourthly, there exists a big stigma against traveling in space in general, especially with limited amounts of funding. Fifthly, the ultimate goal is not to travel to Mars but to travel beyond as well -- becoming an interstellar civilization requires that the fear of space be overcome and requires innovating with new technologies. 
             <p>
             Over the next few decades, I plan on designing a startup that perfects the use of robots for space colonization and development, such that one day space may become more democratized. Furthermore, I hope that by creating new propulsion systems, we can create new hope for long-term and long-distance expeditions to planets far away that may hold the key to life. Currently, a team at Harvard and I are planning to launch a CubeSat into space on a model rocket, and are hoping to understand the mechanics of sending up such a system to space.
             </p>
@@ -95,9 +98,10 @@
       <div class="contactForm">
         <div class="projectstext" id="formtext">
           <br>
-          <em class="whiteTitle">-->Secure Contact Form Coming Soon</em><br>
-          <em class="whiteTitle">-->Blog and Planned Projects to be updated with embedding of Youtube in site</em>
-          <!-- <form id="formproper" action="mailForm.php" method="POST" enctype="multipart/form-data">
+<!--           <em class="whiteTitle">If you would like to contact me</em><br>
+          <em class="whiteTitle">Blog and Planned Projects to be updated with embedding of Youtube in site</em> -->
+           <form id="formproper"  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
           <fieldset>
             <label class="formlabel" minlength="3" for="name">Name</label><br>
             <input class="formbox" placeholder="Love Li" type="text" name="name" required autofocus>
@@ -116,10 +120,26 @@
              </div>
           </fieldset>
           <br><br><br><br><br><br><br><br><br><br><br>
-          <button name="submit" type="submit" id="msgsubmit" data-submit="Message sending">Send</button>-->
+          <button name="submit" type="submit" id="msgsubmit" data-submit="Message sending">Send</button>
           <br><br>
+
         </div>
       </div>
+<!--       <script>
+      $('#submit').click(function() {
+        $.ajax({
+            url: 'mailform.php',
+            type: 'POST',
+            data: {
+                email: 'dylanlix@gmail.com',
+                message: 'hello world!'
+            },
+            success: function(msg) {
+                alert('Email Sent');
+            }               
+        });
+    });
+    </script> -->
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
       </script>
